@@ -1,0 +1,16 @@
+__pycache__
+results/
+figs/
+data
+logs/
+.pytest_cache/
+*.swp
+*.aux
+*.dvi
+*.pdf
+*.log
+*.out
+*.pdf
+*.bbl
+*.blg
+.DS_Store
