@@ -74,28 +74,6 @@ class ResNet(nn.Module):
         self.softmax = softmax
         self.bn = bn
 
-    def fuse_bn(self):
-        if self.bn:
-            self.fc.fuse_bn()
-            self.layer0.fuse_bn()
-            for L in self.layers:
-                for l in L:
-                    try:
-                        l.fuse_bn()
-                    except AttributeError as e:
-                        pass
-            self.bn=False
-
-    def normalize(self):
-        self.fc.normalize()
-        self.layer0.normalize(norm='2,inf')
-        for L in self.layers:
-            for l in L:
-                try:
-                    l.normalize()
-                except AttributeError as e:
-                    pass
-
     @property
     def num_parameters(self):
         return sum([w.numel() for w in self.parameters()])
