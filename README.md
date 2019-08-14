@@ -1,4 +1,4 @@
-This is a template repository for running experiments in computer vision classification problems.
+This is a template repository for running experiments in computer vision classification problems using deep neural networks.
 Included are many of the standard architectures, including [ResNet](https://arxiv.org/abs/1512.03385), [ResNeXt](https://arxiv.org/abs/1611.05431), [VGG](https://arxiv.org/abs/1409.1556)
 and [AllCNN](https://arxiv.org/pdf/1412.6806.pdf).
 The main starting point is `experiment_template/`,  which contains a barebones script for training a model
