@@ -13,10 +13,10 @@ from torch import optim
 from torch.optim.lr_scheduler import LambdaLR
 import torchnet as tnt
 
-# put these modules on your $PYTHONPATH
-from flashlight import dataloader
-from flashlight.dataloader import cutout
-from flashlight import cvmodels as models
+sys.path.append('../')
+import dataloader
+from dataloader import cutout
+import cvmodels as models
 
 # -------------
 # Initial setup

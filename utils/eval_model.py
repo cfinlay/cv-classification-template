@@ -13,7 +13,8 @@ from torch.autograd import grad
 from torchvision.datasets import CIFAR10, CIFAR100, MNIST
 from torch.utils.data import Subset
 
-from flashlight.utils.loaders import get_model
+
+from loaders import get_model
 
 
 
