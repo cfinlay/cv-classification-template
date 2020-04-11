@@ -55,7 +55,7 @@ def cutout(mask_size,channels=3):
 
 def mnist(datadir, training_transforms=[], mode='train', transform=False, greyscale=False, **kwargs):
     assert mode in ['train', 'test']
-    if greyscale=True:
+    if greyscale==True:
         warnings.warn('mnist is already greyscale')
 
     if len(training_transforms)>0 or transform is True:
