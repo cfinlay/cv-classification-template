@@ -42,7 +42,6 @@ ln -s $SCRATCH $LOGDIR
 python -u ./train.py \
     --bn \
     --lr 1e-1 \
-    --cutout 16 \
     --model $MODEL \
     --dataset $DATASET \
     --datadir $DATADIR \

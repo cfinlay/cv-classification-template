@@ -43,8 +43,6 @@ if args.logdir is None:
             '{0:%Y-%m-%dT%H%M%S}'.format(datetime.datetime.now()))
 os.makedirs(args.logdir, exist_ok=True)
 
-if args.dataset in ['mnist','Fashion']:
-    args.greyscale=True
 
 
 # Print arguments to std out
@@ -299,8 +297,6 @@ def main():
     pct0 = 100.
     for e in range(args.epochs):
 
-        # Update the learning rate
-        schedule.step()
 
         time = train(e, time)
 
@@ -321,6 +317,9 @@ def main():
 
         if fail_count < 1:
             raise ValueError('Percent error has not decreased in %d epochs'%fail_max)
+
+        # Update the learning rate
+        schedule.step()
 
 
 if __name__ == '__main__':

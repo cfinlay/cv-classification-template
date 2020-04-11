@@ -53,8 +53,10 @@ def cutout(mask_size,channels=3):
 
     return _cutout
 
-def mnist(datadir, training_transforms=[], mode='train', transform=False, **kwargs):
+def mnist(datadir, training_transforms=[], mode='train', transform=False, greyscale=False, **kwargs):
     assert mode in ['train', 'test']
+    if greyscale=True:
+        warnings.warn('mnist is already greyscale')
 
     if len(training_transforms)>0 or transform is True:
         warnings.warn('mnist dataloader does not transform images')
